@@ -1,0 +1,1688 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Hengra Malhas | Moda e Confecção</title>
+
+  <meta name="description"
+        content="Hengra Malhas — fabricação e facção de peças do vestuário em Águas de Lindóia - SP.">
+
+  <style>
+    :root {
+      --primary: #171717;
+      --secondary: #b08d57;
+      --secondary-light: #d8bd91;
+      --cream: #f8f5ef;
+      --white: #fff;
+      --text: #555;
+      --dark: #171717;
+      --border: #e7e2d9;
+      --shadow: 0 15px 40px rgba(0,0,0,.08);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      line-height: 1.6;
+      background: var(--white);
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: min(1150px, 92%);
+      margin: auto;
+    }
+
+    /* =========================
+       HEADER
+    ========================= */
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 999;
+      background: rgba(255,255,255,.96);
+      border-bottom: 1px solid rgba(0,0,0,.08);
+      backdrop-filter: blur(10px);
+    }
+
+    .nav {
+      height: 78px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo-mark {
+      width: 46px;
+      height: 46px;
+      border: 2px solid var(--secondary);
+      display: grid;
+      place-items: center;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      font-weight: bold;
+      color: var(--secondary);
+    }
+
+    .logo-text {
+      font-family: Georgia, serif;
+      font-size: 21px;
+      font-weight: bold;
+      color: var(--dark);
+      letter-spacing: .5px;
+    }
+
+    .logo-text small {
+      display: block;
+      font-family: Arial, sans-serif;
+      font-size: 9px;
+      letter-spacing: 2px;
+      color: var(--secondary);
+      text-transform: uppercase;
+    }
+
+    .menu {
+      display: flex;
+      list-style: none;
+      gap: 28px;
+      align-items: center;
+    }
+
+    .menu a {
+      color: #333;
+      font-size: 14px;
+      font-weight: bold;
+      transition: .2s;
+    }
+
+    .menu a:hover {
+      color: var(--secondary);
+    }
+
+    .menu .contact-btn {
+      background: var(--dark);
+      color: white;
+      padding: 12px 19px;
+    }
+
+    .menu-button {
+      display: none;
+      border: 0;
+      background: transparent;
+      font-size: 28px;
+      cursor: pointer;
+    }
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+      min-height: 760px;
+      padding-top: 78px;
+      display: flex;
+      align-items: center;
+      background:
+        linear-gradient(
+          90deg,
+          rgba(0,0,0,.82),
+          rgba(0,0,0,.55),
+          rgba(0,0,0,.20)
+        ),
+        radial-gradient(circle at 75% 35%, #8b7458, #29251f 55%, #111);
+      color: white;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 50%;
+      right: -180px;
+      bottom: -200px;
+    }
+
+    .hero-content {
+      max-width: 700px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .eyebrow {
+      color: var(--secondary-light);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-weight: bold;
+      margin-bottom: 18px;
+    }
+
+    .hero h1 {
+      font-family: Georgia, serif;
+      font-size: clamp(44px, 7vw, 76px);
+      line-height: 1.03;
+      margin-bottom: 25px;
+      font-weight: normal;
+    }
+
+    .hero h1 span {
+      color: var(--secondary-light);
+    }
+
+    .hero p {
+      max-width: 610px;
+      font-size: 18px;
+      color: rgba(255,255,255,.82);
+      margin-bottom: 32px;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .btn {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      padding: 14px 24px;
+      font-weight: bold;
+      transition: .2s;
+    }
+
+    .btn-gold {
+      background: var(--secondary);
+      color: white;
+    }
+
+    .btn-gold:hover {
+      background: #967544;
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      border: 1px solid rgba(255,255,255,.4);
+      color: white;
+    }
+
+    .btn-outline:hover {
+      background: white;
+      color: var(--dark);
+    }
+
+    /* =========================
+       INTRO
+    ========================= */
+
+    section {
+      padding: 95px 0;
+    }
+
+    .intro {
+      background: var(--cream);
+    }
+
+    .intro-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 70px;
+      align-items: center;
+    }
+
+    .intro-image {
+      min-height: 450px;
+      background:
+        linear-gradient(
+          135deg,
+          rgba(176,141,87,.8),
+          rgba(25,25,25,.9)
+        );
+      position: relative;
+      overflow: hidden;
+    }
+
+    .intro-image::before {
+      content: "HENGRA";
+      position: absolute;
+      color: rgba(255,255,255,.08);
+      font-size: 80px;
+      font-family: Georgia, serif;
+      transform: rotate(-90deg);
+      top: 170px;
+      left: -65px;
+      letter-spacing: 5px;
+    }
+
+    .intro-image::after {
+      content: "MALHAS";
+      position: absolute;
+      color: white;
+      font-family: Georgia, serif;
+      font-size: 38px;
+      letter-spacing: 8px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+    }
+
+    .section-title {
+      font-family: Georgia, serif;
+      color: var(--dark);
+      font-size: clamp(32px, 4vw, 48px);
+      line-height: 1.15;
+      font-weight: normal;
+      margin-bottom: 20px;
+    }
+
+    .section-text {
+      margin-bottom: 20px;
+    }
+
+    .gold-line {
+      width: 60px;
+      height: 2px;
+      background: var(--secondary);
+      margin: 18px 0 25px;
+    }
+
+    /* =========================
+       SERVIÇOS
+    ========================= */
+
+    .center {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 50px;
+    }
+
+    .center .gold-line {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .service {
+      padding: 35px 30px;
+      border: 1px solid var(--border);
+      background: white;
+      transition: .25s;
+    }
+
+    .service:hover {
+      transform: translateY(-7px);
+      box-shadow: var(--shadow);
+      border-color: transparent;
+    }
+
+    .service-number {
+      font-family: Georgia, serif;
+      font-size: 42px;
+      color: var(--secondary);
+      margin-bottom: 12px;
+    }
+
+    .service h3 {
+      color: var(--dark);
+      font-family: Georgia, serif;
+      font-size: 23px;
+      margin-bottom: 10px;
+    }
+
+    .service p {
+      font-size: 14px;
+    }
+
+    /* =========================
+       DIFERENCIAIS
+    ========================= */
+
+    .dark-section {
+      background: var(--dark);
+      color: white;
+    }
+
+    .dark-section .section-title {
+      color: white;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(4,1fr);
+      gap: 25px;
+    }
+
+    .feature {
+      text-align: center;
+      padding: 20px;
+    }
+
+    .feature-icon {
+      width: 60px;
+      height: 60px;
+      margin: 0 auto 20px;
+      border: 1px solid var(--secondary);
+      display: grid;
+      place-items: center;
+      color: var(--secondary-light);
+      font-size: 23px;
+    }
+
+    .feature h3 {
+      margin-bottom: 8px;
+      color: white;
+      font-family: Georgia, serif;
+    }
+
+    .feature p {
+      color: #aaa;
+      font-size: 14px;
+    }
+
+    /* =========================
+       DADOS
+    ========================= */
+
+    .company-data {
+      background: var(--cream);
+    }
+
+    .data-box {
+      border: 1px solid var(--border);
+      background: white;
+      padding: 45px;
+    }
+
+    .data-grid {
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+    }
+
+    .data-item {
+      background: white;
+      padding: 20px;
+    }
+
+    .data-item small {
+      display: block;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #999;
+      font-size: 10px;
+      margin-bottom: 5px;
+    }
+
+    .data-item strong {
+      color: var(--dark);
+      font-size: 15px;
+    }
+
+    /* =========================
+       CONTATO
+    ========================= */
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      gap: 35px;
+    }
+
+    .contact-info,
+    .contact-form {
+      border: 1px solid var(--border);
+      padding: 40px;
+    }
+
+    .contact-info h3,
+    .contact-form h3 {
+      color: var(--dark);
+      font-family: Georgia, serif;
+      font-size: 27px;
+      margin-bottom: 25px;
+    }
+
+    .info {
+      display: flex;
+      gap: 15px;
+      margin-bottom: 25px;
+    }
+
+    .info-icon {
+      width: 42px;
+      height: 42px;
+      flex: 0 0 42px;
+      background: var(--cream);
+      display: grid;
+      place-items: center;
+      color: var(--secondary);
+    }
+
+    .info strong {
+      display: block;
+      color: var(--dark);
+      margin-bottom: 2px;
+    }
+
+    .info span {
+      font-size: 14px;
+    }
+
+    .form-group {
+      margin-bottom: 17px;
+    }
+
+    label {
+      display: block;
+      color: var(--dark);
+      font-weight: bold;
+      font-size: 13px;
+      margin-bottom: 7px;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 14px;
+      border: 1px solid var(--border);
+      outline: none;
+      font-family: Arial, sans-serif;
+    }
+
+    input:focus,
+    textarea:focus {
+      border-color: var(--secondary);
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 130px;
+    }
+
+    .submit {
+      width: 100%;
+      border: 0;
+      background: var(--dark);
+      color: white;
+      cursor: pointer;
+      font-size: 15px;
+    }
+
+    .submit:hover {
+      background: #333;
+    }
+
+    /* =========================
+       CTA
+    ========================= */
+
+    .cta {
+      background:
+        linear-gradient(
+          135deg,
+          #171717,
+          #40382d
+        );
+      text-align: center;
+      color: white;
+    }
+
+    .cta h2 {
+      font-family: Georgia, serif;
+      font-size: clamp(32px,5vw,52px);
+      font-weight: normal;
+      margin-bottom: 12px;
+    }
+
+    .cta p {
+      max-width: 600px;
+      margin: auto auto 28px;
+      color: #ccc;
+    }
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+      background: #101010;
+      color: #999;
+      padding: 55px 0 25px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr;
+      gap: 45px;
+      padding-bottom: 40px;
+    }
+
+    footer h3 {
+      color: white;
+      font-family: Georgia, serif;
+      margin-bottom: 15px;
+    }
+
+    footer p,
+    footer li {
+      font-size: 14px;
+    }
+
+    footer ul {
+      list-style: none;
+    }
+
+    footer li {
+      margin-bottom: 8px;
+    }
+
+    footer a:hover {
+      color: white;
+    }
+
+    .copyright {
+      border-top: 1px solid #252525;
+      padding-top: 20px;
+      text-align: center;
+      font-size: 12px;
+    }
+
+    /* =========================
+       WHATSAPP
+    ========================= */
+
+    .whatsapp {
+      position: fixed;
+      right: 22px;
+      bottom: 22px;
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      background: #25D366;
+      color: white;
+      display: grid;
+      place-items: center;
+      font-size: 27px;
+      z-index: 1000;
+      box-shadow: 0 8px 25px rgba(37,211,102,.35);
+    }
+
+    .whatsapp:hover {
+      transform: scale(1.08);
+    }
+
+    /* =========================
+       RESPONSIVO
+    ========================= */
+
+    @media(max-width: 850px) {
+
+      .menu-button {
+        display: block;
+      }
+
+      .menu {
+        display: none;
+        position: absolute;
+        top: 78px;
+        left: 0;
+        right: 0;
+        background: white;
+        flex-direction: column;
+        padding: 20px;
+        gap: 4px;
+        box-shadow: 0 10px 20px rgba(0,0,0,.08);
+      }
+
+      .menu.active {
+        display: flex;
+      }
+
+      .menu li {
+        width: 100%;
+      }
+
+      .menu a {
+        display: block;
+        padding: 11px;
+      }
+
+      .intro-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .services-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .features {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media(max-width: 560px) {
+
+      .hero {
+        min-height: 650px;
+      }
+
+      .hero h1 {
+        font-size: 44px;
+      }
+
+      section {
+        padding: 65px 0;
+      }
+
+      .services-grid,
+      .features,
+      .data-grid,
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .data-box,
+      .contact-info,
+      .contact-form {
+        padding: 25px;
+      }
+
+      .intro-image {
+        min-height: 330px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- =========================
+       HEADER
+  ========================= -->
+
+  <header>
+
+    <div class="container nav">
+
+      <a href="#inicio" class="logo">
+
+        <div class="logo-mark">
+          HM
+        </div>
+
+        <div class="logo-text">
+          Hengra
+          <small>Malhas</small>
+        </div>
+
+      </a>
+
+      <button
+        class="menu-button"
+        id="menuButton"
+        aria-label="Abrir menu">
+        ☰
+      </button>
+
+      <ul class="menu" id="menu">
+
+        <li>
+          <a href="#inicio">Início</a>
+        </li>
+
+        <li>
+          <a href="#empresa">Empresa</a>
+        </li>
+
+        <li>
+          <a href="#servicos">Serviços</a>
+        </li>
+
+        <li>
+          <a href="#dados">Dados</a>
+        </li>
+
+        <li>
+          <a href="#contato" class="contact-btn">
+            Contato
+          </a>
+        </li>
+
+      </ul>
+
+    </div>
+
+  </header>
+
+
+  <!-- =========================
+       HERO
+  ========================= -->
+
+  <main>
+
+    <section class="hero" id="inicio">
+
+      <div class="container">
+
+        <div class="hero-content">
+
+          <div class="eyebrow">
+            Hengra Malhas
+          </div>
+
+          <h1>
+            Moda feita com
+            <span>qualidade.</span>
+          </h1>
+
+          <p>
+            Confecção e facção de peças do vestuário,
+            com experiência e atuação em Águas de
+            Lindóia, São Paulo.
+          </p>
+
+          <div class="buttons">
+
+            <a
+              href="#contato"
+              class="btn btn-gold">
+              Fale conosco
+            </a>
+
+            <a
+              href="#empresa"
+              class="btn btn-outline">
+              Conheça a empresa
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         EMPRESA
+    ========================= -->
+
+    <section class="intro" id="empresa">
+
+      <div class="container">
+
+        <div class="intro-grid">
+
+          <div class="intro-image"></div>
+
+          <div>
+
+            <div class="eyebrow">
+              Sobre a Hengra
+            </div>
+
+            <h2 class="section-title">
+              Experiência em
+              confecção e malharia
+            </h2>
+
+            <div class="gold-line"></div>
+
+            <p class="section-text">
+              A Hengra Malhas LTDA atua no segmento de
+              confecção, com atividade principal voltada
+              à facção de peças do vestuário, exceto roupas
+              íntimas.
+            </p>
+
+            <p class="section-text">
+              A empresa está estabelecida em Águas de
+              Lindóia, no estado de São Paulo, e possui
+              atuação desde 1999.
+            </p>
+
+            <a
+              href="#contato"
+              class="btn btn-gold">
+              Solicitar informações
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         SERVIÇOS
+    ========================= -->
+
+    <section id="servicos">
+
+      <div class="container">
+
+        <div class="center">
+
+          <div class="eyebrow">
+            Atuação
+          </div>
+
+          <h2 class="section-title">
+            Soluções em vestuário
+          </h2>
+
+          <div class="gold-line"></div>
+
+          <p>
+            Estrutura para atender demandas relacionadas
+            à produção e confecção de peças do vestuário.
+          </p>
+
+        </div>
+
+
+        <div class="services-grid">
+
+          <article class="service">
+
+            <div class="service-number">
+              01
+            </div>
+
+            <h3>
+              Facção
+            </h3>
+
+            <p>
+              Produção e acabamento de peças do vestuário
+              para empresas e parceiros do setor.
+            </p>
+
+          </article>
+
+
+          <article class="service">
+
+            <div class="service-number">
+              02
+            </div>
+
+            <h3>
+              Confecção
+            </h3>
+
+            <p>
+              Atuação no segmento de fabricação e
+              preparação de peças de vestuário.
+            </p>
+
+          </article>
+
+
+          <article class="service">
+
+            <div class="service-number">
+              03
+            </div>
+
+            <h3>
+              Vestuário
+            </h3>
+
+            <p>
+              Soluções relacionadas a artigos de
+              vestuário e acessórios.
+            </p>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         DIFERENCIAIS
+    ========================= -->
+
+    <section class="dark-section">
+
+      <div class="container">
+
+        <div class="center">
+
+          <div class="eyebrow">
+            Nossa atuação
+          </div>
+
+          <h2 class="section-title">
+            Compromisso com a produção
+          </h2>
+
+          <div class="gold-line"></div>
+
+        </div>
+
+
+        <div class="features">
+
+          <div class="feature">
+
+            <div class="feature-icon">
+              ✓
+            </div>
+
+            <h3>
+              Experiência
+            </h3>
+
+            <p>
+              Empresa com atividade desde 1999.
+            </p>
+
+          </div>
+
+
+          <div class="feature">
+
+            <div class="feature-icon">
+              ◆
+            </div>
+
+            <h3>
+              Qualidade
+            </h3>
+
+            <p>
+              Atenção ao processo de produção.
+            </p>
+
+          </div>
+
+
+          <div class="feature">
+
+            <div class="feature-icon">
+              ◇
+            </div>
+
+            <h3>
+              Produção
+            </h3>
+
+            <p>
+              Atuação especializada em vestuário.
+            </p>
+
+          </div>
+
+
+          <div class="feature">
+
+            <div class="feature-icon">
+              +
+            </div>
+
+            <h3>
+              Parcerias
+            </h3>
+
+            <p>
+              Relacionamento com empresas e clientes.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         DADOS DA EMPRESA
+    ========================= -->
+
+    <section class="company-data" id="dados">
+
+      <div class="container">
+
+        <div class="center">
+
+          <div class="eyebrow">
+            Informações empresariais
+          </div>
+
+          <h2 class="section-title">
+            Dados da Hengra Malhas
+          </h2>
+
+          <div class="gold-line"></div>
+
+        </div>
+
+
+        <div class="data-box">
+
+          <div class="data-grid">
+
+            <div class="data-item">
+
+              <small>
+                Razão Social
+              </small>
+
+              <strong>
+                Hengra Malhas LTDA
+              </strong>
+
+            </div>
+
+
+            <div class="data-item">
+
+              <small>
+                Nome Fantasia
+              </small>
+
+              <strong>
+                Hengra Malhas
+              </strong>
+
+            </div>
+
+
+            <div class="data-item">
+
+              <small>
+                CNPJ
+              </small>
+
+              <strong>
+                03.495.880/0001-02
+              </strong>
+
+            </div>
+
+
+            <div class="data-item">
+
+              <small>
+                Data de abertura
+              </small>
+
+              <strong>
+                27/10/1999
+              </strong>
+
+            </div>
+
+
+            <div class="data-item">
+
+              <small>
+                Situação cadastral
+              </small>
+
+              <strong>
+                ATIVA
+              </strong>
+
+            </div>
+
+
+            <div class="data-item">
+
+              <small>
+                Natureza jurídica
+              </small>
+
+              <strong>
+                Sociedade Empresária Limitada
+              </strong>
+
+            </div>
+
+
+            <div class="data-item">
+
+              <small>
+                Atividade principal
+              </small>
+
+              <strong>
+                Facção de peças do vestuário,
+                exceto roupas íntimas
+              </strong>
+
+            </div>
+
+
+            <div class="data-item">
+
+              <small>
+                Município
+              </small>
+
+              <strong>
+                Águas de Lindóia - SP
+              </strong>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         CONTATO
+    ========================= -->
+
+    <section id="contato">
+
+      <div class="container">
+
+        <div class="center">
+
+          <div class="eyebrow">
+            Contato
+          </div>
+
+          <h2 class="section-title">
+            Vamos conversar?
+          </h2>
+
+          <div class="gold-line"></div>
+
+          <p>
+            Entre em contato para solicitar informações
+            sobre produtos, serviços ou parcerias.
+          </p>
+
+        </div>
+
+
+        <div class="contact-grid">
+
+
+          <div class="contact-info">
+
+            <h3>
+              Informações
+            </h3>
+
+
+            <div class="info">
+
+              <div class="info-icon">
+                📍
+              </div>
+
+              <div>
+
+                <strong>
+                  Endereço
+                </strong>
+
+                <span>
+                  Rua José Maria de Souza, 133<br>
+                  Bairro do Tanquinho<br>
+                  Águas de Lindóia - SP<br>
+                  CEP 13940-000
+                </span>
+
+              </div>
+
+            </div>
+
+
+            <div class="info">
+
+              <div class="info-icon">
+                ☎
+              </div>
+
+              <div>
+
+                <strong>
+                  Telefone
+                </strong>
+
+                <span>
+                  (19) 3824-7867
+                </span>
+
+              </div>
+
+            </div>
+
+
+            <div class="info">
+
+              <div class="info-icon">
+                💬
+              </div>
+
+              <div>
+
+                <strong>
+                  WhatsApp
+                </strong>
+
+                <span>
+                  (19) 3824-3861
+                </span>
+
+              </div>
+
+            </div>
+
+
+            <div class="info">
+
+              <div class="info-icon">
+                🏢
+              </div>
+
+              <div>
+
+                <strong>
+                  CNPJ
+                </strong>
+
+                <span>
+                  03.495.880/0001-02
+                </span>
+
+              </div>
+
+            </div>
+
+
+            <a
+              href="https://wa.me/551938243861"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-gold">
+
+              Falar pelo WhatsApp
+
+            </a>
+
+          </div>
+
+
+          <div class="contact-form">
+
+            <h3>
+              Envie uma mensagem
+            </h3>
+
+            <form id="contactForm">
+
+              <div class="form-group">
+
+                <label for="nome">
+                  Nome
+                </label>
+
+                <input
+                  id="nome"
+                  name="nome"
+                  type="text"
+                  placeholder="Seu nome"
+                  required>
+
+              </div>
+
+
+              <div class="form-group">
+
+                <label for="email">
+                  E-mail
+                </label>
+
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  placeholder="seu@email.com"
+                  required>
+
+              </div>
+
+
+              <div class="form-group">
+
+                <label for="telefone">
+                  Telefone
+                </label>
+
+                <input
+                  id="telefone"
+                  name="telefone"
+                  type="tel"
+                  placeholder="(00) 00000-0000">
+
+              </div>
+
+
+              <div class="form-group">
+
+                <label for="mensagem">
+                  Mensagem
+                </label>
+
+                <textarea
+                  id="mensagem"
+                  name="mensagem"
+                  placeholder="Digite sua mensagem..."
+                  required></textarea>
+
+              </div>
+
+
+              <button
+                type="submit"
+                class="btn submit">
+
+                Enviar mensagem
+
+              </button>
+
+            </form>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         CTA
+    ========================= -->
+
+    <section class="cta">
+
+      <div class="container">
+
+        <h2>
+          Hengra Malhas
+        </h2>
+
+        <p>
+          Confecção, facção e soluções para o
+          segmento de vestuário.
+        </p>
+
+        <a
+          href="https://wa.me/551938243861"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn btn-gold">
+
+          Entrar em contato
+
+        </a>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =========================
+       FOOTER
+  ========================= -->
+
+  <footer>
+
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <div>
+
+          <h3>
+            Hengra Malhas
+          </h3>
+
+          <p>
+            Confecção e facção de peças do vestuário.
+          </p>
+
+          <p style="margin-top:10px;">
+            CNPJ: 03.495.880/0001-02
+          </p>
+
+        </div>
+
+
+        <div>
+
+          <h3>
+            Navegação
+          </h3>
+
+          <ul>
+
+            <li>
+              <a href="#inicio">
+                Início
+              </a>
+            </li>
+
+            <li>
+              <a href="#empresa">
+                Empresa
+              </a>
+            </li>
+
+            <li>
+              <a href="#servicos">
+                Serviços
+              </a>
+            </li>
+
+            <li>
+              <a href="#dados">
+                Dados
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+
+
+        <div>
+
+          <h3>
+            Contato
+          </h3>
+
+          <ul>
+
+            <li>
+              Águas de Lindóia - SP
+            </li>
+
+            <li>
+              (19) 3824-7867
+            </li>
+
+            <li>
+              CNPJ: 03.495.880/0001-02
+            </li>
+
+          </ul>
+
+        </div>
+
+      </div>
+
+
+      <div class="copyright">
+
+        © <span id="year"></span>
+        Hengra Malhas LTDA.
+        Todos os direitos reservados.
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <!-- WHATSAPP -->
+
+  <a
+    href="https://wa.me/551938243861"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="whatsapp"
+    aria-label="WhatsApp">
+
+    ☎
+
+  </a>
+
+
+  <script>
+
+    /* MENU MOBILE */
+
+    const menuButton =
+      document.getElementById("menuButton");
+
+    const menu =
+      document.getElementById("menu");
+
+    menuButton.addEventListener("click", function() {
+
+      menu.classList.toggle("active");
+
+    });
+
+
+    /* FECHAR MENU */
+
+    document.querySelectorAll(".menu a")
+      .forEach(function(link) {
+
+        link.addEventListener("click", function() {
+
+          menu.classList.remove("active");
+
+        });
+
+      });
+
+
+    /* ANO */
+
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+
+
+    /* FORMULÁRIO */
+
+    document
+      .getElementById("contactForm")
+      .addEventListener("submit", function(event) {
+
+        event.preventDefault();
+
+        const nome =
+          document.getElementById("nome").value;
+
+        const mensagem =
+          document.getElementById("mensagem").value;
+
+        const telefone =
+          "551938243861";
+
+        const texto =
+          "Olá, Hengra Malhas!%0A%0A" +
+          "Nome: " + encodeURIComponent(nome) +
+          "%0A%0AMensagem: " +
+          encodeURIComponent(mensagem);
+
+        window.open(
+          "https://wa.me/" +
+          telefone +
+          "?text=" +
+          texto,
+          "_blank"
+        );
+
+      });
+
+  </script>
+
+</body>
+</html>
